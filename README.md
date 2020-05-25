@@ -2,4 +2,4 @@
 
 ## A Twitter weather bot
 
-![Pull Data and Build](https://github.com/filiptronicek/weatherBot/workflows/Pull%20Data%20and%20Build/badge.svg)
+![Execute Weather API Script](https://github.com/filiptronicek/weatherBot/workflows/Execute%20Weather%20API%20Script/badge.svg)
