@@ -15,6 +15,7 @@ jobs:
       env:
         API_key: ${{ secrets.API_KEY }}
         CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+        CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
         ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
         ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
     - uses: mikeal/publish-to-github-action@master
