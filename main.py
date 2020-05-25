@@ -2,7 +2,7 @@ from pyowm import OWM
 from twython import Twython
 from os import environ
 
-if environ.get('API_key') is not None:
+if environ.get('API_key') is None:
     from creds import API_key, CONSUMER_KEY, CONSUMER_SECRET, ACCESS_KEY, ACCESS_SECRET
 else:
     API_key = environ.get('API_key')
