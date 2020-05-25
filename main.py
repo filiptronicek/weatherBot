@@ -24,4 +24,4 @@ if weather == "sunny":
     tstatus = "Yes, it is sunny"
 else:
     tstatus = "No, the weather is "+weather
-#twitter_api.update_status(status=tstatus)
+twitter_api.update_status(status=tstatus)
