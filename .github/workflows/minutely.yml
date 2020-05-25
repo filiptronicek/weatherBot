@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  '* * * * *'
+    - cron:  '*/10 * * * *'
 name: Pull Data and Build
 jobs:
   build:
