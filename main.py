@@ -1,6 +1,9 @@
 from pyowm import OWM
 from twython import Twython
 from os import environ
+import random
+
+sayings = ["lol", "lmao", "lmfao", "... very epic", "(laugh now)", "- so exciting indeed"]
 
 if environ.get('API_key') is None:
     from creds import API_key, CONSUMER_KEY, CONSUMER_SECRET, ACCESS_KEY, ACCESS_SECRET
@@ -24,4 +27,4 @@ if weather == "sunny":
     tstatus = "Yes, it is sunny"
 else:
     tstatus = "No, the weather is "+weather
-twitter_api.update_status(status=tstatus)
+twitter_api.update_status(status=tstatus+" "+random.choice(sayings))
