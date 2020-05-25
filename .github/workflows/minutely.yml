@@ -4,13 +4,14 @@ on:
 name: Pull Data and Build
 jobs:
   build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Download deps
-      run: |
-        pip install -r "requirements.txt"
+    - name: Set up Python 3.8
+    uses: actions/setup-python@v2
+    with:
+      python-version: 3.8
+  - name: Install dependencies
+    run: |
+      python -m pip install --upgrade pip
+      if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Tweet
       run: pythom main.py
       env:
