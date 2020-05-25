@@ -4,11 +4,13 @@ on:
 name: Execute Weather API Script
 jobs:
   build:
-    - name: Check out the repository
-      uses: actions/checkout@master
     runs-on: ubuntu-latest
+
+
     steps:
-    - name: Set up Python 3.8
+      - name: Check out the repository
+      uses: actions/checkout@master
+      - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
