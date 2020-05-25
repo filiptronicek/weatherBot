@@ -9,7 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Download deps
-      run: pip install pyowm, twython
+      run: |
+        pip install -r "requirements.txt"
     - name: Tweet
       run: pythom main.py
       env:
