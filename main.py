@@ -27,4 +27,12 @@ if weather == "sunny" or weather == "clear":
     tstatus = "Yes, it is sunny"
 else:
     tstatus = "No, the weather is "+weather
-twitter_api.update_status(status=tstatus+" "+random.choice(sayings))
+
+def tweet():
+    try:
+        twitter_api.update_status(status=tstatus+" "+random.choice(sayings))
+    except Exception as e:
+        tweet()
+
+
+tweet()
