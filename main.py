@@ -15,9 +15,10 @@ else:
     ACCESS_SECRET = environ.get('ACCESS_SECRET')
 
 owm = OWM(API_key)
-obs = owm.weather_at_place('Prague,CZ')
-w = obs.get_weather()
-weather = w.get_status().lower()
+mgr = owm.weather_manager()
+obs = mgr.weather_at_place('Prague,CZ')
+w = obs.weather
+weather = w.status.lower()
 
 twitter_api = Twython(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_KEY, ACCESS_SECRET)
 
@@ -31,7 +32,7 @@ else:
 def tweet():
     try:
         twitter_api.update_status(status=tstatus+" "+random.choice(sayings))
-    except Exception as e:
+    except Exception:
         tweet()
 
 
