@@ -24,7 +24,7 @@ twitter_api = Twython(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_KEY, ACCESS_SECRET)
 
 tstatus = ""
 
-if weather == "sunny" or weather == "clear":
+if weather == "sunny":
     tstatus = "Yes, it is sunny"
 else:
     tstatus = "No, the weather is "+weather
