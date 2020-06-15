@@ -26,6 +26,8 @@ tstatus = ""
 
 if weather == "sunny":
     tstatus = "Yes, it is sunny"
+elif weather == "thunderstorm":
+    tstatus = "It's like the upposite of sunny. It's raining lighting bolts!"
 else:
     tstatus = "No, the weather is "+weather
 
