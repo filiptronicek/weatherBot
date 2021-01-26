@@ -3,7 +3,7 @@ from twython import Twython
 from os import environ
 import random
 
-sayings = ["lol", "lmao", "lmfao", "... very epic", "(laugh now)", "- so exciting indeed", "... now this is getting awkward"]
+sayings = ["lol", "lmao", "lmfao", "... very epic", "(laugh now)", "- so exciting indeed", "... now this is getting awkward",". I blame it on politics", ". Poggers" ]
 
 if environ.get('API_key') is None:
     from creds import API_key, CONSUMER_KEY, CONSUMER_SECRET, ACCESS_KEY, ACCESS_SECRET
